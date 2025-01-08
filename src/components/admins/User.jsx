@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-function User() {
+function User({token}) {
     const [search, Setsearch] = useState('')
     const [users, setUsers] = useState([])
     const navigate = useNavigate()

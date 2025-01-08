@@ -7,12 +7,15 @@ function Notification() {
 
     const fetchNotif = async () => {
         try {
+            const token = localStorage.getItem('token')
+            console.log('token',token);
+            axios.defaults.headers["authorization"] = `Bearer ${token}`;
+            
             const response = await axios.get("http://localhost:3005/api/demand/lists");
-            // if (response.data.data) setData(response.data.data);
             console.log(response);
             
         } catch (err) {
-            console.error(err.message || err.response);
+            console.error('Nooo'+err.message || err.response);
         }
     };
 

@@ -5,7 +5,6 @@ import Admin from "./Admin"
 import User from "./User"
 import Notification from "./Notification"
 import { useEffect, useState } from "react"
-import axios from "axios"
 function AdminBoard() {
 
     const [adminBox, setAdminBox] = useState(false)
@@ -18,8 +17,7 @@ function AdminBoard() {
 
     useEffect(() => {
         const token = localStorage.getItem('token')
-        if (!token) navigate('/admin')
-        axios.defaults.headers.common['authorizations'] = `Bearer ${token}`;
+        if (!token) navigate('/admin')    
     }, [])
 
 
