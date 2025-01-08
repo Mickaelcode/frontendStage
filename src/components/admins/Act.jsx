@@ -405,7 +405,7 @@ function Act() {
                         <td>{act.province}</td>
                         <td className="text-center">
                             <img
-                                src={`data:image/png;base64,${act.fileActe}`}
+                                src={`http://localhost:3005/${act.fileActe}`}
                                 alt="File Acte"
                                 style={{ height: "70px", objectFit: "contain" }}
                             />
